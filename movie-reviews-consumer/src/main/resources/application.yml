@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        reviews-in:
+          destination: reviews
+          contentType: application/json
+server:
+  port: 9000
+
+couchbase:
+  nodes: ut000.example.com
+  username: test
+  password: testtest
+  bucketname: movie-review
